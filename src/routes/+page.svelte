@@ -30,6 +30,7 @@ let initRun = `${0} days, ${0} hours, ${0} mins, ${0} secs`
         return `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
     }
 
+    
 
 </script>
 
