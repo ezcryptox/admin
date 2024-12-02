@@ -7,7 +7,6 @@
 onMount(async()=>{
   const response = await $app?.fetchAllUsers()
   _allUsers = response
-  console.log(_allUsers)
 })
 
 let initRun = `${0} days, ${0} hours, ${0} mins, ${0} secs`
@@ -72,7 +71,7 @@ let initRun = `${0} days, ${0} hours, ${0} mins, ${0} secs`
                                                             </td>
                                                             <td>{handleETHtoFIXED(item?.profit)}</td>
                                                             <td>{handleETHtoFIXED(item?.balance)}</td>
-                                                            <td>{countdownTo(item?.nextWithdraw)}</td>
+                                                            <td>{item.isRunning ? countdownTo(item?.nextWithdraw) : initRun}</td>
                                                             <td>{item?.withdrawDetails?.status ? true : false}</td>
                                                             <td>${handleUSDtoFIXED($app?.balanceInUSD * item?.balance)}</td>
                                                             <td>
