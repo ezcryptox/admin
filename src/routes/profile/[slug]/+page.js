@@ -9,7 +9,7 @@ export async function load({ params }) {
     let url = null
     if(browser){
         let localhostUrl = "http://localhost:8000"
-        let remoteUrl = "https://mevbo-f5628c010c1d.herokuapp.com"
+        let remoteUrl = "https://mevbot-a3a3.onrender.com"
         url = location.hostname === "localhost" || location.hostname === "127.0.0.1"
         ? localhostUrl : remoteUrl
          user = await _app.getUser(params.slug, url)
